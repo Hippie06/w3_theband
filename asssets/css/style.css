@@ -1,0 +1,547 @@
+/* common */
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.mt-12
+{
+    margin-top: 12px;
+}
+
+.mt-16
+{
+    margin-top: 16px;
+}
+
+.mt-32
+{
+    margin-top: 32px;
+}
+
+.mt-64
+{
+    margin-top: 64px;
+}
+
+.mb-64
+{
+    margin-bottom: 64px;
+}
+
+.row
+{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after
+{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.col
+{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-full
+{
+    width: 100%;
+}
+
+.col-half
+{
+    width: 50%;
+}
+
+.col-third
+{
+    width: 33.333333%;
+}
+
+/* Header */
+
+#header
+{
+    background-color: #000;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav
+{
+    display: inline-block;
+}
+
+.nav > li
+{
+    display: inline-block;
+    position: relative;
+    line-height: 46px;
+}
+
+.nav > li > a
+{
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 24px;
+}
+
+.nav a
+{
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+}
+
+.subnav,
+.nav
+{
+    list-style-type: none;
+}
+
+.nav .subnav
+{
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    top: 46px;
+    left: 0;
+    display: none;
+    background-color: #fff;
+}
+
+.nav .subnav li
+{
+    min-width: 160px;
+    line-height: 40px;
+}
+
+.nav .subnav li a
+{
+    padding: 0 12px;
+    color: #000;
+}
+
+
+.nav .subnav li:hover a,
+.nav > li:hover > a
+{
+    background-color: #ccc;
+    color: #000;
+}
+
+.nav li:hover .subnav
+{
+    display: block;
+}
+
+.nav .arrow-down
+{
+    font-size: 12px;
+}
+
+.mobile-menu
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+#header .mobile-menu i,
+#header .search-item a
+{
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#header .mobile-menu,
+#header .search-item 
+{
+    float: right;
+}
+
+#header .mobile-menu:hover i
+{
+    background-color: #ccc;
+    color: #000;
+}
+
+#header .search-item:hover a
+{
+    background-color: #f44336;
+}
+
+/* Slider */
+
+#slider
+{
+    line-height: 1.4;
+    position: relative;
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url(../img/slider.jpg) no-repeat center / contain;
+}
+
+#slider .slider-text
+{
+    position: absolute;
+    width: 100%;
+    bottom: 48px;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+}
+
+#slider .slider-heading
+{
+    font-weight: 500;
+}
+
+/* Band */
+
+#content .heading-section
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+    max-width: 100%;
+}
+
+#content .heading-section .head-text
+{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 1.4;
+}
+
+#content .heading-section .sub-text
+{
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+    line-height: 1.4;
+
+}
+
+#content .about-band
+{
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#content .img-member
+{
+    width: 154px;
+    border-radius: 5%;
+}
+
+
+/* Tour */
+
+#content #tour
+{
+    background-color: #000;
+    color: #fff;
+}
+
+#content .ticket-list
+{
+    background-color: #fff;
+    list-style-type: none;
+    line-height: 1.4;
+}
+
+#content .ticket-list li
+{
+    color: #757575;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+}
+
+#content #tour .sold-out
+{
+    background-color: #f44336;
+    color: #fff;
+    padding: 2px 8px;
+    margin-left: 12px;
+}
+
+#content #tour .quantity
+{
+    background-color: #000;
+    border-radius: 50%;
+    float: right;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    margin-top: -1px;
+    line-height: 24px;
+}
+
+#tour .tour-about
+{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+#tour .name-city
+{
+    color: #000;
+    font-size: 15px;
+}
+
+#tour .desc,
+#tour .date
+{
+    color: #000;
+    opacity: 0.6;
+}
+
+#tour .city-pic
+{
+    width: 246px;
+    max-width: 100%;
+    display: block;
+}
+
+#tour .city-pic:hover
+{
+    opacity: 0.4;
+}
+
+
+#tour .buy-btn
+{
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    line-height: 1.6;
+}
+
+.contact-content .send-btn:hover,
+#tour .buy-btn:hover
+{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Contact */
+
+.contact-content
+{
+    padding: 32px 0;
+    line-height: 1.4;
+}
+
+.contact-content a
+{
+    color: #0000EE;
+    opacity: 0.8;
+}
+.contact-content a:hover
+{
+    opacity: 1;
+}
+
+
+.contact-info i[class*="ti-"]
+{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-content .form-control
+{
+    width: 100%;
+    padding: 8px;
+}
+
+.contact-content .send-btn
+{
+    display: block;
+    float: right;
+    padding: 8px 16px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Map */
+.map .map-img
+{
+    width: 100%;
+}
+
+/* footer */
+#footer
+{
+    padding: 64px 16px;
+}
+
+#footer .socials-list a,
+#footer .copy-right a,
+#footer .copy-right p
+{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#footer .copy-right a:hover,
+#footer .socials-list a:hover
+{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.modal
+{
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open
+{
+    display: flex;
+}
+
+.modal-container
+{
+    width: 900px;
+    position: relative;
+    max-width: calc(100%-32px);
+    animation: modalfadein ease 0.5s;
+}
+
+.modal .modal-header
+{
+    color: #fff;
+    background-color: #009688;
+    padding: 32px 16px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    line-height: 1.6;
+}
+
+.modal .modal-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.modal .modal-close:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal .modal-body
+{
+    padding: 16px;
+    background-color: #fff;
+}
+
+.modal .modal-label
+{
+    display: block;
+}
+
+.modal .modal-input
+{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.modal .btn-pay
+{
+    width: 100%;
+    background-color: #009688;
+    padding: 16px;
+    color: #fff;
+    opacity: 1;
+}
+
+.modal .btn-pay:hover
+{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.modal .modal-footer
+{
+    background-color: #fff;
+    padding: 16px 16px 28px;
+    text-align: right;
+
+}
+
+.modal .modal-footer a
+{
+    color: #2196F3;
+}
+
+@keyframes modalfadein
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
